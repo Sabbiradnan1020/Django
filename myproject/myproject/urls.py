@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("",views.hompage),
     path("myapp/",include("myapp.urls")),
+   # path("second_app/",include("second_app.urls")),
     path('contact/',views.contact)
 ]
