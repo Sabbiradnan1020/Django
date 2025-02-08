@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1> This is home page</h1>
+  <h2>Name : {{name}}</h2>
+<h2>Age :  {{age}}</h2>
+<h2>{{lst}}</h2>
+
+
+
+
+
+{% comment %} conditaionl statment {% endcomment %}
+
+{% if age >= 20 %}
+    <p>You are an adult.</p>
+{% else %}
+    <p>You are under 20.</p>
+{% endif %}
+
+{{lst}}
+
+<h4>{{ lst | join:" - " }}</h4>
+<h3>{{ birthday | date:"D d M Y" }}</h3>
+<h2>{{ value | length }}</h2>
+<h1>{{'loved coding life is game' | truncatechars:6}}</h1>
+<h1>{{'loved coding life is game' | truncatewords:3}}</h1>
+
+
+{% comment %} for loop {% endcomment %}
+{% for i in courses %}
+<h4>{{i.id}} {{i.course}}{{i.fee}}</h4>
+{% endfor %}
+
+
+
+</body>
+</html>
