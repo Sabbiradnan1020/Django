@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Add New Category</h2>
+<form method="post">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="category_name">Category Name</label>
+    {{ form.category_name }}  <!-- Render the field properly -->
+  </div>
+  <button type="submit" class="btn btn-primary">Add Category</button>
+</form>
+{% endblock %}

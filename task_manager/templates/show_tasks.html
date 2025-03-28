@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+<h2>All Tasks</h2>
+<div class="row">
+  {% for task in tasks %}
+  <div class="col-md-4 mb-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ task.taskTitle }}</h5>
+        <p class="card-text">{{ task.taskDescription }}</p>
+        <p class='card-category'>{{task.category}}</p>
+        <a href="{% url 'edit_task' task.id %}" class="btn btn-warning">Edit</a>
+        <a href="{% url 'delete_task' task.id %}" class="btn btn-danger"
+          >Delete</a
+        >
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
